@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <h1 class="text-center mt-5 display-1"><i class="fas fa-hat-cowboy fa-md"></i>Login form</h1>
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <img src="https://illustratious.s3.amazonaws.com/screenshots/t4dyka-creating-webp.webp" 
+        class="w-100" alt="">
+      </div>
+      <div class="col-12 col-sm-6"id="card">
+        <div class="row">
+            <div class="col-sm-2 col-md-3"></div>
+            <!-- svg image -->
+            <div class="col-sm-8 col-md-6 shadow-lg shadow-white border-5 m-2 p-4"
+             style="background-image: linear-gradient(180deg , #ffffff ,  #000000) ; border-radius: 10px;">
+              <!-- form  -->
+             <form #ref="ngForm" (ngSubmit)="onLogin(ref.value)">
+                <div class="mb-3">
+                  <!-- username -->
+                  <label for="un" class="form-label">Username</label>
+                  <input type="text" name="username" class="form-control" id="un" 
+                   placeholder="Enter username......" ngModel required #refun="ngModel">
+                   <p class="text-danger" *ngIf="(ref.submitted || refun.touched) && refun.errors?.required">*Username Required!!!</p>
+                </div>
+                <!-- password -->
+                <div class="mb-3">
+                  <label for="Password" class="form-label">Password</label>
+                  <input type="password" name="password" class="form-control" id="Pd"
+                   placeholder="Enter password....." ngModel required #refup="ngModel">
+                   <p class="text-danger" *ngIf="(ref.submitted || refup.touched) && refup.errors?.required">*Password Required!!!</p>
+                </div>
+                <!-- E-mail -->
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" 
+                    placeholder="enter your email id" ngModel required #refue="ngModel">
+                    <p class="text-danger" *ngIf="(ref.submitted || refue.touched) && refue.errors?.required">*Email Required!!!</p>
+                  </div>
+                <div>
+                    <p class="text-info text-end">forget password?</p>
+               </div>
+                <button type="submit" class="btn btn-primary mt-4 d-block mx-auto"><i class="fas fa-sign-in-alt"></i> Login</button>
+              </form>
+            </div>
+            <div class="col-sm-2 col-md-3"></div>
+        </div>
+    
+        
+      </div>
+    </div>
+    </div>

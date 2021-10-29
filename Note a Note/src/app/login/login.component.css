@@ -1,0 +1,25 @@
+/*.logdiv
+{
+    box-shadow: 4px 4px 2px solid pink; 
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
+    padding: 2rem 5rem 4rem;
+    max-width: 35rem;
+    margin: auto;
+
+}*/
+input
+{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    border-bottom: 4px solid black;
+}
+.wrapper
+{
+    font-family: 'Cookie', cursive;
+    font-family: 'Festive', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Uchen', serif;
+}
